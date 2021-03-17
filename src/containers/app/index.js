@@ -52,9 +52,6 @@ export default function App() {
   if (footerOpened) {
     footerFadingClass += ' footer__fading--active';
     footerSlidingClass += ' footer__sliding--active';
-  } else {
-    footerFadingClass += ' footer__fading--inactive';
-    footerSlidingClass += ' footer__sliding--inactive';
   }
 
   return (
