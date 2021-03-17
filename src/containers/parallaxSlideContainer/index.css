@@ -1,0 +1,23 @@
+.parallax {
+  position: relative;
+}
+
+.parallax__base {
+  display: flex;
+}
+
+.parallax__upper {
+  position: absolute;
+  display: flex;
+  top: 0%;
+  left: 0%;
+  transition: top ease-out 0.6s;
+}
+
+.parallax__upper--top {
+  top: -50%
+}
+
+.parallax__upper--bottom {
+  top: 50%
+}

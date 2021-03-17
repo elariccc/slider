@@ -1,0 +1,55 @@
+.pulsar-container {
+  position: absolute;
+}
+
+.circle {
+  position: absolute;
+  display: inline;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.circle--still {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 100, 0, 0.2);
+  border-color: rgba(255, 100, 0, 0.8);
+}
+
+.circle--pulsing {
+  position: absolute;
+  display: inline;
+  animation: circle--pulsing 2s linear infinite;
+}
+
+.circle--pulsing-delayed {
+  visibility: hidden;
+  position: absolute;
+  display: inline;
+  animation: circle--pulsing 2s 1s linear infinite;
+}
+
+@keyframes circle--pulsing {
+  from {
+    visibility: visible;
+    height: 0%;
+    width: 0%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 100, 0, 0);
+    border-color: rgba(255, 100, 0, 0);
+  }
+
+  to {
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(255, 100, 0, 0.2);
+    border-color: rgba(255, 100, 0, 0.8);
+  }
+}

@@ -1,0 +1,51 @@
+.horizontal-container {
+  position: relative;
+  display: flex;
+}
+
+.horizontal__slides-container {
+  display: flex;
+  position: relative;
+  transition: left 0.6s ease-out;
+}
+
+.input-year-container {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-year__range {
+  -webkit-appearance: none;
+  margin: 0 0 82px 0;
+  width: 725px;
+  height: 12px;
+}
+.input-year__range:focus {
+  outline: none;
+}
+.input-year__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 56px;
+  width: 44px;
+  background: url(../../images/thumb.png);
+  cursor: pointer;
+}
+
+.input-year__labels-container {
+  position: absolute;
+  width: 725px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(2em);
+  font-size: x-large;
+}
+
+.input-year__label {
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
