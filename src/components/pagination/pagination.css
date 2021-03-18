@@ -1,4 +1,4 @@
-.pagination-container {
+.pagination {
   position: absolute;
   right: 0%;
   top: 0%;
@@ -13,7 +13,7 @@
   flex-direction: column;
 }
 
-.page-circle {
+.pagination__circle {
   margin: 3px;
   height: 13px;
   width: 13px;
@@ -22,6 +22,6 @@
   transition: background-color 0.2s;
 }
 
-.page-circle--active {
+.pagination__circle--active {
   background-color: orange;
 }

@@ -1,20 +1,20 @@
 import { useState } from 'react';
 
-import { YEARS, ROUND_DELAY } from '../../constants/index';
+import { YEARS, ROUND_DELAY } from '../../constants';
 
-import './index.css';
+import './horizontal-slider.css';
 
 export default function HorizontalSlide() {
   const [ currentSlide, setCurrentSlide ] = useState(0);
   const [ rangeValue, setRangeValue ] = useState(0);
   const [ roundInterval, setRoundInterval ] = useState(null);
-
+  
   const handleInputYearChange = event => {
     clearInterval(roundInterval);
     setRangeValue(+event.target.value);
     setCurrentSlide(Math.round(event.target.value));
   };
-
+  
   const handleInputYearTouchEnd = event => {
     //for 60FPS
     const tickDuration = 17; 
@@ -36,7 +36,7 @@ export default function HorizontalSlide() {
     );
   };
 
-  const horizontalContainerStyle = {
+  const slidesContainerStyle = {
     left: `${ - currentSlide * 100 }%`,
   };
 
@@ -45,23 +45,24 @@ export default function HorizontalSlide() {
     background: `linear-gradient(to right, rgba(209, 234, 255, 1) 0%, rgba(209, 234, 255, 1) ${rangeValuePercents}%, rgba(209, 234, 255, 0.2) ${rangeValuePercents}%, rgba(209, 234, 255, 0.2) 100%)`,
   }
 
+  const yearLabels = YEARS.map((year, index) => (<p className='input-year__label' key={index}>{year}</p>));
+
   return (
-    <div className='horizontal-container'>
+    <div className='horizontal-slider'>
       <div 
-        className='horizontal__slides-container'
-        style={horizontalContainerStyle}
+        className='horizontal-slider__slides-container'
+        style={slidesContainerStyle}
       >
         <img src='./images/3.1.jpg' alt='slide_1988'/>
         <img src='./images/3.2.jpg' alt='slide_2009'/>
         <img src='./images/3.3.jpg' alt='slide_2016'/>
       </div>
-      <div className='input-year-container'>
+      <div className='horizontal-slider__input-year input-year'>
         <input 
           type='range' 
           min='0' 
           max={ YEARS.length - 1 }
           step='any'
-          list='labels'
           className='input-year__range'
           onTouchStart={event => event.stopPropagation()}
           onTouchEnd={handleInputYearTouchEnd}
@@ -76,9 +77,3 @@ export default function HorizontalSlide() {
     </div>
   );
 }
-
-const yearLabels = [];
-
-YEARS.forEach((year, index) => {
-  yearLabels.push(<p className='input-year__label' key={index}>{year}</p>)
-});

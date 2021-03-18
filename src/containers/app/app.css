@@ -1,0 +1,13 @@
+.view-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 768px;
+  width: 1024px;
+}
+
+.view-wrapper__slides {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: top ease-out 0.6s;
+}

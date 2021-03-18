@@ -1,19 +1,22 @@
-.horizontal-container {
+.horizontal-slider {
   position: relative;
   display: flex;
 }
 
-.horizontal__slides-container {
+.horizontal-slider__slides-container {
   display: flex;
   position: relative;
   transition: left 0.6s ease-out;
 }
 
-.input-year-container {
+.horizontal-slider__input-year {
   position: absolute;
   bottom: 0%;
   left: 0%;
   width: 100%;
+}
+
+.input-year {
   display: flex;
   justify-content: center;
 }

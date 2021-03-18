@@ -1,8 +1,8 @@
-.pulsar-container {
+.pulsar {
   position: absolute;
 }
 
-.circle {
+.pulsar__circle {
   position: absolute;
   display: inline;
   border-radius: 50%;
@@ -10,7 +10,7 @@
   border-style: solid;
 }
 
-.circle--still {
+.pulsar__circle--still {
   height: 100%;
   width: 100%;
   top: 0;
@@ -19,20 +19,20 @@
   border-color: rgba(255, 100, 0, 0.8);
 }
 
-.circle--pulsing {
+.pulsar__circle--pulsing {
   position: absolute;
   display: inline;
   animation: circle--pulsing 2s linear infinite;
 }
 
-.circle--pulsing-delayed {
+.pulsar__circle--pulsing-delayed {
   visibility: hidden;
   position: absolute;
   display: inline;
-  animation: circle--pulsing 2s 1s linear infinite;
+  animation: pulsing 2s 1s linear infinite;
 }
 
-@keyframes circle--pulsing {
+@keyframes pulsing {
   from {
     visibility: visible;
     height: 0%;
