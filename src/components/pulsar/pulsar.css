@@ -22,7 +22,7 @@
 .pulsar__circle--pulsing {
   position: absolute;
   display: inline;
-  animation: circle--pulsing 2s linear infinite;
+  animation: pulsing 2s linear infinite;
 }
 
 .pulsar__circle--pulsing-delayed {
